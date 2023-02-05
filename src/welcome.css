@@ -4,7 +4,7 @@ a {
 }
 
 .Welcome {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./assets/img/bubbles-bg.jpg");
   margin: 0px;
