@@ -17,13 +17,13 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <>
+      <React.Fragment>
         <Routes>
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/" element={<Welcome />} />
         </Routes>
-      </>
+      </React.Fragment>
     </Router>
   );
 }
