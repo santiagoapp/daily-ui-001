@@ -4,7 +4,7 @@ import './signup.css';
 import './signin.css';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   // Link
