@@ -1,0 +1,208 @@
+a {
+  color: blue;
+  text-decoration: none; /* no underline */
+}
+
+.text-highlight {
+  color:#416fdf
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.form-input{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input>input[type=text],input[type=password],input[type=email]{
+  border: 1px solid #c1ccd7;
+  border-radius: 20px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 6ex;
+  width: -webkit-fill-available;
+}
+
+.form-input>input[type=checkbox]{
+  margin-left: 20px;
+  font-family: system-ui, sans-serif;
+  height: 20px;
+  width: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.form-input>label[for=fullname],label[for=password],label[for=email]{
+  position: absolute;
+  top: 3px;
+  z-index: 1;
+  left: 16px;
+  background-color: white;
+  color: #171D35;
+  padding: 0 5px;
+  font-size: 10pt;
+}
+
+.form-input>label[for=agreement]{
+  color: #a4afba;
+  padding: 0 10px;
+  font-size: 10pt;
+}
+
+.Signup {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/img/bubbles-bg.jpg");
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Signup__block {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  min-width: 500px;
+  border-radius: 40px;
+}
+
+@media (max-width: 768px) {
+  .Signup__block {
+    position: fixed;
+    min-width: 100vw;
+    padding-left: 0px;
+    padding-right: 0px;
+    left: 0;
+    bottom: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+.Signup__goback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 40px 0 0 20px; 
+  display:flex;
+  font-family: system-ui, sans-serif;
+}
+
+.Signup__goback-icon {
+  color:#ffffff;
+  padding-right:10px;
+}
+
+.Signup__goback-text {
+  color:#ffffff
+}
+
+.Signup__form-block{
+  position: relative;
+  width: -webkit-fill-available;
+  padding: 16px;
+}
+
+.Signup__title {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+  color: #416fdf;
+}
+
+.Signup__buttons-block {
+  display: flex;
+  margin-top: 2em;
+}
+
+.Signup__signup-link {
+  width: -webkit-fill-available;
+}
+
+.Signup__signup-button {
+  color: #fff;
+  height: 60px;
+  width: -webkit-fill-available;
+  min-width: 150px;
+  border-style: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  padding: 0px 25px 0px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #416fdf;
+}
+
+.Signup__signup-button:hover {
+  background-color: #6875e0;
+  overflow: hidden;
+  outline: none;
+}
+
+.Signup__social-media-block{
+  margin-top: 2em;
+}
+
+.Signup__special-text{
+  position: relative;
+  border-bottom: solid;
+  margin-bottom: 10px;
+  height: 20px;
+  border-width: 1px;
+  border-color: #a4afba;
+  display: flex;
+  justify-content: center;
+}
+
+.Signup__special-text>span{
+  position: absolute;
+  background-color: white;
+  color: #a4afba;
+  top: 10px;
+  padding:0 8px;
+  font-size: 10pt;
+}
+
+.Signup__social-media-icons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2em;
+  margin: 2em 0;
+}
+
+.social-logo{
+  height: 2.2em;
+}
+
+.Signup__disclamer{
+  display: flex;
+  justify-content: center;
+  color: #a4afba;
+  font-size: 10pt;
+}

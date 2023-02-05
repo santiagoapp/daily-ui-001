@@ -1,0 +1,137 @@
+a {
+  color: blue;
+  text-decoration: none; /* no underline */
+}
+
+.Welcome {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/img/bubbles-bg.jpg");
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Welcome__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-family: system-ui, sans-serif;
+}
+
+.Welcome__description {
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+  margin: 0px;
+}
+
+.Welcome__title {
+  font-size: 2.5em;
+  text-align: center;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+}
+
+.Welcome__buttons-block {
+  display: flex;
+  margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+  .Welcome__buttons-block {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.Welcome__signin-button {
+  color: #fff;
+  width: auto;
+  height: 50px;
+  border-width: 2px;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 25px;
+  min-width: 150px;
+  margin-right: 10px;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  padding: 0px 25px 0px 25px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.Welcome__signin-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .Welcome__signin-button {
+    background-color: none;
+    margin: 0px;
+    min-width: 100%;
+    height: 80px;
+    border: none;
+  }
+  .Welcome__signin-link {
+    min-width: 50%;
+  }
+}
+
+.Welcome__signup-button {
+  color: #fff;
+  width: auto;
+  height: 50px;
+  min-width: 150px;
+  border-style: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  padding: 0px 25px 0px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #416fdf;
+}
+
+.Welcome__signup-button:hover {
+  background-color: #6875e0;
+  overflow: hidden;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .Welcome__signup-button {
+    background-color: #fff;
+    color: #416fdf;
+    margin: 0px;
+    min-width: 100%;
+    height: 80px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .Welcome__signup-link {
+    min-width: 50%;
+  }
+}
