@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/daily-ui-001/static/css/main.97cc6ff8.css",
+    "main.js": "/daily-ui-001/static/js/main.6ebeedda.js",
+    "static/js/787.ace62f16.chunk.js": "/daily-ui-001/static/js/787.ace62f16.chunk.js",
+    "static/media/bubbles-bg.jpg": "/daily-ui-001/static/media/bubbles-bg.eb6ebb8152fb802cfce3.jpg",
+    "static/media/Inter-Bold.woff": "/daily-ui-001/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
+    "static/media/Inter-Regular.woff": "/daily-ui-001/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/apple.svg": "/daily-ui-001/static/media/apple.cdaa2ace178052721f0a5dc332277283.svg",
+    "static/media/google.svg": "/daily-ui-001/static/media/google.9a7800d06783d80a1c12249a8ca58e9d.svg",
+    "static/media/twitter.svg": "/daily-ui-001/static/media/twitter.fe06d572bd13680e66f4d31fc7cf1832.svg",
+    "index.html": "/daily-ui-001/index.html",
+    "static/media/facebook.svg": "/daily-ui-001/static/media/facebook.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
+    "main.97cc6ff8.css.map": "/daily-ui-001/static/css/main.97cc6ff8.css.map",
+    "main.6ebeedda.js.map": "/daily-ui-001/static/js/main.6ebeedda.js.map",
+    "787.ace62f16.chunk.js.map": "/daily-ui-001/static/js/787.ace62f16.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97cc6ff8.css",
+    "static/js/main.6ebeedda.js"
+  ]
+}
