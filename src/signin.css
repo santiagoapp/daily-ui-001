@@ -65,8 +65,7 @@ a {
 
 .Signin {
   min-height: 100vh;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
+  
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./assets/img/bubbles-bg.jpg");
   margin: 0px;
@@ -78,6 +77,13 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .Signin {
+    min-height: stretch;
+    min-height: -webkit-fill-available;
+  }
 }
 
 .Signin__block {
