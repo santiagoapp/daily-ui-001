@@ -1,13 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { register } from "./../auth";
 import facebook from "../assets/icons/facebook.svg";
 import twitter from "../assets/icons/twitter.svg";
 import google from "../assets/icons/google.svg";
 import apple from "../assets/icons/apple.svg";
 
 const SignUp = () => {
+
+  const [email, setEmail] = useState("");
+  const [fullname, setFullname] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    const response = await register({email, fullname, password})  
+    if(response){
+      navigate('/sign-in')
+    }
+  };
+
   return (
     <div className="Signup">
       <Link to="/">
@@ -29,6 +43,7 @@ const SignUp = () => {
                 id="fullname"
                 name="fullname"
                 placeholder="Enter Full Name"
+                onChange={(e) => setFullname(e.target.value)}
               />
             </div>
             <div className="form-input">
@@ -38,6 +53,7 @@ const SignUp = () => {
                 id="email"
                 name="email"
                 placeholder="Enter Email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="form-input">
@@ -47,6 +63,7 @@ const SignUp = () => {
                 id="password"
                 name="password"
                 placeholder="Enter Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="form-input row-reverse">
@@ -63,7 +80,7 @@ const SignUp = () => {
             </div>
             <div className="Signup__buttons-block">
               <Link to="/sign-in" className="Signup__signup-link">
-                <button className="Signup__signup-button">Sign up</button>
+                <button className="Signup__signup-button" onClick={() => handleSubmit()}>Sign up</button>
               </Link>
             </div>
             <div className="Signup__social-media-block">

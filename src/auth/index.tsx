@@ -46,7 +46,7 @@ export const login = async ({ email, password }: LoginProps) => {
       if (response.status === 200) {
         return response.json().then((data) => {
           localStorage.setItem("user-token", data.token);
-          return true;
+          return data;
         });
       }
       return false;
@@ -58,13 +58,13 @@ export const login = async ({ email, password }: LoginProps) => {
 };
 
 type RegisterProps = {
-  fullName: string;
+  fullname: string;
   email: string;
   password: string;
 };
 
 export const register = async ({
-  fullName,
+  fullname,
   email,
   password,
 }: RegisterProps) => {
@@ -78,7 +78,7 @@ export const register = async ({
     method: "POST",
     headers: headersList,
     body: JSON.stringify({
-      fullName,
+      fullname,
       email,
       password,
     }),
@@ -86,8 +86,7 @@ export const register = async ({
     .then((response) => {
       if (response.status === 200) {
         return response.json().then((data) => {
-          localStorage.setItem("user-token", data.token);
-          return true;
+          return data;
         });
       }
       return false;
