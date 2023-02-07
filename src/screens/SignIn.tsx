@@ -1,13 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { login } from "./../auth";
 import facebook from "../assets/icons/facebook.svg";
 import twitter from "../assets/icons/twitter.svg";
 import google from "../assets/icons/google.svg";
 import apple from "../assets/icons/apple.svg";
 
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    const response = await login({email, password})  
+    if(response){
+      navigate('/landing')
+    }
+  };
+
   return (
     <div className="Signin">
       <Link to="/">
@@ -29,6 +41,7 @@ const SignIn = () => {
                 id="email"
                 name="email"
                 placeholder="Enter Email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="form-input">
@@ -38,6 +51,7 @@ const SignIn = () => {
                 id="password"
                 name="password"
                 placeholder="Enter Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="Signin__form-remember">
@@ -53,7 +67,12 @@ const SignIn = () => {
             </div>
             <div className="Signin__buttons-block">
               <Link to="/sign-in" className="Signin__signin-link">
-                <button className="Signin__signin-button">Sign in</button>
+                <button
+                  className="Signin__signin-button"
+                  onClick={() => handleSubmit()}
+                >
+                  Sign in
+                </button>
               </Link>
             </div>
             <div className="Signin__social-media-block">
