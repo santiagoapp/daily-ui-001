@@ -78,13 +78,6 @@ a {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .Signup {
-    min-height: stretch;
-    min-height: -webkit-fill-available;
-  }
-}
-
 .Signup__block {
   display: flex;
   background-color: #fff;
